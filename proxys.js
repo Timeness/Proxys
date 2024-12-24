@@ -31,7 +31,7 @@ async function updateProxies() {
   for (let i = 0; i < proxies.length && filteredProxies.length < 5; i++) {
     const proxy = proxies[i].trim();
     const ping = await checkProxyPing(proxy);
-    if (ping > 200 && ping <= 1000) {
+    if (ping > 200 && ping <= 10000) {
       filteredProxies.push({ proxy, ping });
     }
   }
